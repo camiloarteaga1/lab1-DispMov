@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lab1/screens/grades_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -15,7 +16,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Lab 1'),
+        title: const Text('Lab 1'),
       ),
       body: GridView.count(
         crossAxisCount: 2, // Creates a grid layout with 2 columns
@@ -28,11 +29,11 @@ class _HomeScreenState extends State<HomeScreen> {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => GradesScreen()),
+                MaterialPageRoute(builder: (context) => const GradesScreen()),
               );
             },
             child: Image.network(
-              'https://via.placeholder.com/150', // Replace with your image URL or asset
+              'assets/grades.png', // Replace with your image URL or asset
               fit: BoxFit.cover,
             ),
           ),
@@ -79,3 +80,4 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
     );
   }
+}
