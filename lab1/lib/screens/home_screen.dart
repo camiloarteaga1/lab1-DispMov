@@ -15,67 +15,155 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       appBar: AppBar(
-        title: const Text('Lab 1'),
+        leading: const Padding(
+          padding: EdgeInsets.only(
+            left: 8.0,
+            top: 9.0, 
+            bottom: 9.0,
+          ),
+          child: Image(
+            image: AssetImage('assets/icons/logo.png'),
+          ),
+        ),
+        backgroundColor: const Color.fromARGB(170, 29, 112, 108),
+        title: const Text(
+          'Lab 1',
+          style: TextStyle(
+            fontSize: 24.0,
+            fontWeight: FontWeight.bold,
+            fontFamily: 'Broadway',
+          ),
+        ),
       ),
-      body: GridView.count(
-        crossAxisCount: 2, // Creates a grid layout with 2 columns
-        padding: const EdgeInsets.all(8.0),
-        crossAxisSpacing: 8.0,
-        mainAxisSpacing: 8.0,
+
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.center, // Center content horizontally
         children: <Widget>[
-          // Image 1
-          GestureDetector(
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const GradesScreen()),
-              );
-            },
-            child: Image.network(
-              'assets/grades.png', // Replace with your image URL or asset
-              fit: BoxFit.cover,
+         const Padding(
+            padding: EdgeInsets.all(16.0),
+            child: Center(  // Center the title text
+              child: Text(
+                'Choose a Screen:',
+                style: TextStyle(
+                  fontSize: 24.0,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
             ),
           ),
-          // Image 2
-          // GestureDetector(
-          //   onTap: () {
-          //     Navigator.push(
-          //       context,
-          //       MaterialPageRoute(builder: (context) => CurrencyScreen()),
-          //     );
-          //   },
-          //   child: Image.network(
-          //     'https://via.placeholder.com/150', // Replace with your image URL or asset
-          //     fit: BoxFit.cover,
-          //   ),
-          // ),
-          // // Image 3
-          // GestureDetector(
-          //   onTap: () {
-          //     Navigator.push(
-          //       context,
-          //       MaterialPageRoute(builder: (context) => ResisrtorScreen()),
-          //     );
-          //   },
-          //   child: Image.network(
-          //     'https://via.placeholder.com/150', // Replace with your image URL or asset
-          //     fit: BoxFit.cover,
-          //   ),
-          // ),
-          // // Image 4
-          // GestureDetector(
-          //   onTap: () {
-          //     Navigator.push(
-          //       context,
-          //       MaterialPageRoute(builder: (context) => FreeScreen()),
-          //     );
-          //   },
-          //   child: Image.network(
-          //     'https://via.placeholder.com/150', // Replace with your image URL or asset
-          //     fit: BoxFit.cover,
-          //   ),
-          // ),
+
+          Expanded(
+            child: GridView.count(
+              crossAxisCount: 2, // Creates a grid layout with 2 columns and 2 rows
+              padding: const EdgeInsets.all(8.0),
+              crossAxisSpacing: 8.0,
+              mainAxisSpacing: 8.0,
+              children: <Widget>[
+
+              // Image 1
+              // GestureDetector(
+              //   onTap: () {
+              //     Navigator.push(
+              //       context,
+              //       MaterialPageRoute(builder: (context) => const CurrencyScreen()),
+              //     );
+              //   },
+              //   child: const Column(
+              //     children: [
+              //       Expanded(
+              //         child: Image(
+              //           height: 200,
+              //           width: 200,
+              //           image: AssetImage('assets/images/currency.png')
+              //         ),
+              //       ),
+              //       Padding(
+              //         padding: EdgeInsets.only(top: 8.0),
+              //         child: Text('Conversor de divisas'),
+              //       ),
+              //     ],
+              //   ),
+              // ),
+              
+              // // Image 2
+              // GestureDetector(
+              //   onTap: () {
+              //     Navigator.push(
+              //       context,
+              //       MaterialPageRoute(builder: (context) => const FreeScreen()),
+              //     );
+              //   },
+              //   child: const Column(
+              //     children: [
+              //       Expanded(
+              //         child: Image(
+              //           height: 200,
+              //           width: 200,
+              //           image: AssetImage('assets/images/free.png')
+              //         ),
+              //       ),
+              //       Padding(
+              //         padding: EdgeInsets.only(top: 8.0),
+              //         child: Text('Aplicación libre'),
+              //       ),
+              //     ],
+              //   ),
+              // ),
+
+              // Image 3
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const GradesScreen()),
+                  );
+                },
+                child: const Column(
+                  children: [
+                    Expanded(
+                      child: Image(
+                        height: 200,
+                        width: 200,
+                        image: AssetImage('assets/images/grades.png')
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(top: 8.0),
+                      child: Text('Calculadora de nota final'),
+                    ),
+                  ],
+                ),
+              ),
+              
+              // // Image 4
+              // GestureDetector(
+              //   onTap: () {
+              //     Navigator.push(
+              //       context,
+              //       MaterialPageRoute(builder: (context) => const ResistorScreen()),
+              //     );
+              //   },
+              //   child: const Column(
+              //     children: [
+              //       Expanded(
+              //         child: Image(
+              //           height: 200,
+              //           width: 200,
+              //           image: AssetImage('assets/images/resistor.png')
+              //         ),
+              //       ),
+              //       Padding(
+              //         padding: EdgeInsets.only(top: 8.0),
+              //         child: Text('Calculadora de resistencias'),
+              //       ),
+              //     ],
+              //   ),
+              // ),
+              ],
+            ),
+          ),
         ],
       ),
     );
