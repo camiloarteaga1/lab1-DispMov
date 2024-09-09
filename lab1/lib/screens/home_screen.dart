@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:lab1/screens/grades_screen.dart';
+import 'package:lab1/screens/currency_conv_screen.dart';
+import 'package:lab1/screens/free_screen.dart';
+// import 'package:lab1/screens/grades_screen.dart';
+// import 'package:lab1/screens/resistor_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -63,61 +66,11 @@ class _HomeScreenState extends State<HomeScreen> {
               children: <Widget>[
 
               // Image 1
-              // GestureDetector(
-              //   onTap: () {
-              //     Navigator.push(
-              //       context,
-              //       MaterialPageRoute(builder: (context) => const CurrencyScreen()),
-              //     );
-              //   },
-              //   child: const Column(
-              //     children: [
-              //       Expanded(
-              //         child: Image(
-              //           height: 200,
-              //           width: 200,
-              //           image: AssetImage('assets/images/currency.png')
-              //         ),
-              //       ),
-              //       Padding(
-              //         padding: EdgeInsets.only(top: 8.0),
-              //         child: Text('Conversor de divisas'),
-              //       ),
-              //     ],
-              //   ),
-              // ),
-              
-              // // Image 2
-              // GestureDetector(
-              //   onTap: () {
-              //     Navigator.push(
-              //       context,
-              //       MaterialPageRoute(builder: (context) => const FreeScreen()),
-              //     );
-              //   },
-              //   child: const Column(
-              //     children: [
-              //       Expanded(
-              //         child: Image(
-              //           height: 200,
-              //           width: 200,
-              //           image: AssetImage('assets/images/free.png')
-              //         ),
-              //       ),
-              //       Padding(
-              //         padding: EdgeInsets.only(top: 8.0),
-              //         child: Text('Aplicación libre'),
-              //       ),
-              //     ],
-              //   ),
-              // ),
-
-              // Image 3
               GestureDetector(
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const GradesScreen()),
+                    MaterialPageRoute(builder: (context) => const CurrencyConv()),
                   );
                 },
                 child: const Column(
@@ -126,16 +79,66 @@ class _HomeScreenState extends State<HomeScreen> {
                       child: Image(
                         height: 200,
                         width: 200,
-                        image: AssetImage('assets/images/grades.png')
+                        image: AssetImage('assets/images/currency.png')
                       ),
                     ),
                     Padding(
                       padding: EdgeInsets.only(top: 8.0),
-                      child: Text('Calculadora de nota final'),
+                      child: Text('Conversor de divisas'),
                     ),
                   ],
                 ),
               ),
+              
+              // Image 2
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const CalculatorScreen()),
+                  );
+                },
+                child: const Column(
+                  children: [
+                    Expanded(
+                      child: Image(
+                        height: 200,
+                        width: 200,
+                        image: AssetImage('assets/images/calculator.png')
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(top: 8.0),
+                      child: Text('Aplicación libre'),
+                    ),
+                  ],
+                ),
+              ),
+
+              // Image 3
+              // GestureDetector(
+              //   onTap: () {
+              //     Navigator.push(
+              //       context,
+              //       MaterialPageRoute(builder: (context) => const GradesScreen()),
+              //     );
+              //   },
+              //   child: const Column(
+              //     children: [
+              //       Expanded(
+              //         child: Image(
+              //           height: 200,
+              //           width: 200,
+              //           image: AssetImage('assets/images/grades.png')
+              //         ),
+              //       ),
+              //       Padding(
+              //         padding: EdgeInsets.only(top: 8.0),
+              //         child: Text('Calculadora de nota final'),
+              //       ),
+              //     ],
+              //   ),
+              // ),
               
               // // Image 4
               // GestureDetector(
