@@ -78,12 +78,14 @@ class _GradesScreenState extends State<GradesScreen> {
               children: [
                 const Text(
                   'Mediante esta interfaz podrás calcular tu nota de una manera fácil y rápida, así podrás saber exactamente qué nota definitiva obtendrás para el curso de "Programación para Dispositivos móviles".',
-                  style: TextStyle(fontSize: 16.0),
+                  style: TextStyle(fontSize: 18.0, letterSpacing: 0.5),
                   textAlign: TextAlign.justify,
                 ),
 
                 const SizedBox(height: 16.0),
-                const Text('Ingresa tus notas actuales correspondientes a cada actividad:'),
+                const Text('Ingresa tus notas actuales correspondientes a cada actividad:',
+                    style: TextStyle(fontSize: 18.0, letterSpacing: 0.5),
+                    textAlign: TextAlign.justify),
                 const SizedBox(height: 16.0),
                 // Campo para la nota de practicas de laboratorio
                 TextField(
@@ -128,7 +130,10 @@ class _GradesScreenState extends State<GradesScreen> {
                 // Botón para calcular la nota final
                 ElevatedButton(
                   onPressed: _calcularNotaFinal,
-                  child: const Text('Calcular nota definitiva'),
+                  child: const Text(
+                    'Calcular nota definitiva',
+                    style: TextStyle(fontSize: 18.0),
+                  ),
                 ),
                 const SizedBox(height: 24.0),
                 // Mostrar el mensaje de resultado o error

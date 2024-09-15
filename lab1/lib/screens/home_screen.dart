@@ -48,7 +48,7 @@ class _HomeScreenState extends State<HomeScreen> {
             padding: EdgeInsets.all(16.0),
             child: Center(  // Center the title text
               child: Text(
-                'Choose a Screen:',
+                'Elija una de las funciones',
                 style: TextStyle(
                   fontSize: 24.0,
                   fontWeight: FontWeight.bold,
@@ -109,7 +109,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                     Padding(
                       padding: EdgeInsets.only(top: 8.0),
-                      child: Text('Aplicación libre'),
+                      child: Text('Calculadora'),
                     ),
                   ],
                 ),

@@ -192,6 +192,22 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
   Widget build(BuildContext context) {
     final screenSize = MediaQuery.of(context).size;
     return Scaffold(
+
+      appBar: AppBar(
+        backgroundColor: const Color.fromARGB(255, 19, 225, 81), // Color de la Barra
+        title: const Text(
+          'Calculadora',
+          style: TextStyle(
+            color: Colors.white,
+            fontFamily: 'Roboto',
+            fontWeight: FontWeight.bold,
+            fontSize: 24.0,
+            letterSpacing: 1.2,
+          ),
+        ),
+        centerTitle: true,
+      ),
+
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       body: SafeArea(
         bottom: false,

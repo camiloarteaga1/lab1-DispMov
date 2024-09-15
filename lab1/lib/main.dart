@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:lab1/screens/home_screen.dart';
 
 void main() {
@@ -13,6 +14,16 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'App lab 1',
+
+      localizationsDelegates: const [
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+      ],
+
+      supportedLocales: const [
+        Locale('en', 'US'),
+        Locale('es', 'CO'),
+      ],
 
       // locale: const Locale('es', 'CO'),
 

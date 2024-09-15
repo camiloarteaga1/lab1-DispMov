@@ -10,59 +10,59 @@ class ResistorScreen extends StatefulWidget {
 class _ResistorScreenState extends State<ResistorScreen> {
   // Define the resistor color codes for bands 1, 2, 3, multiplier, tolerance, and temperature coefficient
   final List<String> colorBands = [
-    'Black',
-    'Brown',
-    'Red',
-    'Orange',
-    'Yellow',
-    'Green',
-    'Blue',
-    'Violet',
-    'Gray',
-    'White'
+    'Negro',
+    'Café',
+    'Rojo',
+    'Naranja',
+    'Amarillo',
+    'Verde',
+    'Azúl',
+    'Violeta',
+    'Gris',
+    'Blanco'
   ];
 
   final List<String> multiplierBands = [
-    'Black',
-    'Brown',
-    'Red',
-    'Orange',
-    'Yellow',
-    'Green',
-    'Blue',
-    'Violet',
-    'Gray',
-    'Gold',
-    'Silver'
+    'Negro',
+    'Café',
+    'Rojo',
+    'Naranja',
+    'Amarillo',
+    'Verde',
+    'Azúl',
+    'Violeta',
+    'Gris',
+    'Oro',
+    'Plata'
   ];
 
   final List<String> toleranceBands = [
-    'Brown',
-    'Red',
-    'Green',
-    'Blue',
-    'Violet',
-    'Gray',
-    'Gold',
-    'Silver'
+    'Café',
+    'Rojo',
+    'Verde',
+    'Azúl',
+    'Violeta',
+    'Gris',
+    'Oro',
+    'Plata'
   ];
 
   final List<String> tempCoefficientBands = [
-    'Brown',
-    'Red',
-    'Orange',
-    'Yellow',
-    'Blue',
-    'Violet'
+    'Café',
+    'Rojo',
+    'Naranja',
+    'Amarillo',
+    'Azúl',
+    'Violeta'
   ];
 
   // Selected color values
-  String? band1Color = 'Black';
-  String? band2Color = 'Black';
-  String? band3Color = 'Black';
-  String? multiplierColor = 'Black';
-  String? toleranceColor = 'Gold';
-  String? tempCoefficientColor = 'Brown';
+  String? band1Color = 'Negro';
+  String? band2Color = 'Negro';
+  String? band3Color = 'Negro';
+  String? multiplierColor = 'Negro';
+  String? toleranceColor = 'Oro';
+  String? tempCoefficientColor = 'Café';
 
   int numberOfBands = 4;
   double resistanceValue = 0.0;
@@ -71,53 +71,53 @@ class _ResistorScreenState extends State<ResistorScreen> {
 
   // Color code map for significant digits
   Map<String, int> colorCodeMap = {
-    'Black': 0,
-    'Brown': 1,
-    'Red': 2,
-    'Orange': 3,
-    'Yellow': 4,
-    'Green': 5,
-    'Blue': 6,
-    'Violet': 7,
-    'Gray': 8,
-    'White': 9,
+    'Negro': 0,
+    'Café': 1,
+    'Rojo': 2,
+    'Naranja': 3,
+    'Amarillo': 4,
+    'Verde': 5,
+    'Azúl': 6,
+    'Violeta': 7,
+    'Gris': 8,
+    'Blanco': 9,
   };
 
   // Multiplier map
   Map<String, double> multiplierMap = {
-    'Black': 1,
-    'Brown': 10,
-    'Red': 100,
-    'Orange': 1000,
-    'Yellow': 10000,
-    'Green': 100000,
-    'Blue': 1000000,
-    'Violet': 10000000,
-    'Gray': 100000000,
-    'Gold': 0.1,
-    'Silver': 0.01,
+    'Negro': 1,
+    'Café': 10,
+    'Rojo': 100,
+    'Naranja': 1000,
+    'Amarillo': 10000,
+    'Verde': 100000,
+    'Azúl': 1000000,
+    'Violeta': 10000000,
+    'Gris': 100000000,
+    'Oro': 0.1,
+    'Plata': 0.01,
   };
 
   // Tolerance map
   Map<String, String> toleranceMap = {
-    'Brown': '±1%',
-    'Red': '±2%',
-    'Green': '±0.5%',
-    'Blue': '±0.25%',
-    'Violet': '±0.1%',
-    'Gray': '±0.05%',
-    'Gold': '±5%',
-    'Silver': '±10%',
+    'Café': '±1%',
+    'Rojo': '±2%',
+    'Verde': '±0.5%',
+    'Azúl': '±0.25%',
+    'Violeta': '±0.1%',
+    'Gris': '±0.05%',
+    'Oro': '±5%',
+    'Plata': '±10%',
   };
 
   // Temperature coefficient map (ppm/°C)
   Map<String, String> tempCoefficientMap = {
-    'Brown': '100 ppm/°C',
-    'Red': '50 ppm/°C',
-    'Orange': '15 ppm/°C',
-    'Yellow': '25 ppm/°C',
-    'Blue': '10 ppm/°C',
-    'Violet': '5 ppm/°C',
+    'Café': '100 ppm/°C',
+    'Rojo': '50 ppm/°C',
+    'Naranja': '15 ppm/°C',
+    'Amarillo': '25 ppm/°C',
+    'Azúl': '10 ppm/°C',
+    'Violeta': '5 ppm/°C',
   };
 
   void calculateResistance() {
@@ -146,9 +146,22 @@ class _ResistorScreenState extends State<ResistorScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       appBar: AppBar(
-        title: const Text('Calculadora de resistencias'),
+        backgroundColor: const Color.fromARGB(255, 237, 106, 46), // Color de la Barra
+        title: const Text(
+          'Calculadora de resistencias',
+          style: TextStyle(
+            color: Colors.white,
+            fontFamily: 'Roboto',
+            fontWeight: FontWeight.bold,
+            fontSize: 24.0,
+            letterSpacing: 1.2,
+          ),
+        ),
+        centerTitle: true,
       ),
+
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
@@ -159,7 +172,7 @@ class _ResistorScreenState extends State<ResistorScreen> {
               items: [4, 5, 6].map((int value) {
                 return DropdownMenuItem<int>(
                   value: value,
-                  child: Text('$value Bands'),
+                  child: Text('$value Bandas'),
                 );
               }).toList(),
               onChanged: (newValue) {
