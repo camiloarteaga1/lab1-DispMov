@@ -133,14 +133,7 @@ class _ResistorScreenState extends State<ResistorScreen> {
           // ),
         ),
         backgroundColor: const Color.fromARGB(170, 29, 112, 108),
-        title: const Text(
-          'Lab 1',
-          style: TextStyle(
-            fontSize: 24.0,
-            fontWeight: FontWeight.bold,
-            fontFamily: 'Broadway',
-          ),
-        ),
+        title: const Text('My Movies'),
       ),
 
       body: Padding(
