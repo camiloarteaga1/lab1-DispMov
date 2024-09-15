@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:lab1/screens/currency_conv_screen.dart';
 import 'package:lab1/screens/free_screen.dart';
-// import 'package:lab1/screens/grades_screen.dart';
-// import 'package:lab1/screens/resistor_screen.dart';
+import 'package:lab1/screens/grades_screen.dart';
+import 'package:lab1/screens/resistor_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -26,9 +26,9 @@ class _HomeScreenState extends State<HomeScreen> {
             top: 9.0, 
             bottom: 9.0,
           ),
-          child: Image(
-            image: AssetImage('assets/icons/logo.png'),
-          ),
+          // child: Image(
+          //   image: AssetImage('assets/icons/logo.png'),
+          // ),
         ),
         backgroundColor: const Color.fromARGB(170, 29, 112, 108),
         title: const Text(
@@ -116,54 +116,54 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
 
               // Image 3
-              // GestureDetector(
-              //   onTap: () {
-              //     Navigator.push(
-              //       context,
-              //       MaterialPageRoute(builder: (context) => const GradesScreen()),
-              //     );
-              //   },
-              //   child: const Column(
-              //     children: [
-              //       Expanded(
-              //         child: Image(
-              //           height: 200,
-              //           width: 200,
-              //           image: AssetImage('assets/images/grades.png')
-              //         ),
-              //       ),
-              //       Padding(
-              //         padding: EdgeInsets.only(top: 8.0),
-              //         child: Text('Calculadora de nota final'),
-              //       ),
-              //     ],
-              //   ),
-              // ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const GradesScreen()),
+                  );
+                },
+                child: const Column(
+                  children: [
+                    Expanded(
+                      child: Image(
+                        height: 200,
+                        width: 200,
+                        image: AssetImage('assets/images/grades.png')
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(top: 8.0),
+                      child: Text('Calculadora de nota final'),
+                    ),
+                  ],
+                ),
+              ),
               
-              // // Image 4
-              // GestureDetector(
-              //   onTap: () {
-              //     Navigator.push(
-              //       context,
-              //       MaterialPageRoute(builder: (context) => const ResistorScreen()),
-              //     );
-              //   },
-              //   child: const Column(
-              //     children: [
-              //       Expanded(
-              //         child: Image(
-              //           height: 200,
-              //           width: 200,
-              //           image: AssetImage('assets/images/resistor.png')
-              //         ),
-              //       ),
-              //       Padding(
-              //         padding: EdgeInsets.only(top: 8.0),
-              //         child: Text('Calculadora de resistencias'),
-              //       ),
-              //     ],
-              //   ),
-              // ),
+              // Image 4
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const ResistorScreen()),
+                  );
+                },
+                child: const Column(
+                  children: [
+                    Expanded(
+                      child: Image(
+                        height: 200,
+                        width: 200,
+                        image: AssetImage('assets/images/resistor.png')
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(top: 8.0),
+                      child: Text('Calculadora de resistencias'),
+                    ),
+                  ],
+                ),
+              ),
               ],
             ),
           ),
