@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ResistorScreen extends StatefulWidget {
-  const ResistorScreen({Key? key});
+  const ResistorScreen({super.key});
 
   @override
   State<ResistorScreen> createState() => _ResistorScreenState();
@@ -128,12 +128,19 @@ class _ResistorScreenState extends State<ResistorScreen> {
             top: 9.0, 
             bottom: 9.0,
           ),
-          child: Image(
-            image: AssetImage('assets/icons/logo.png'),
-          ),
+          // child: Image(
+          //   image: AssetImage('assets/icons/logo.png'),
+          // ),
         ),
         backgroundColor: const Color.fromARGB(170, 29, 112, 108),
-        title: const Text('My Movies'),
+        title: const Text(
+          'Lab 1',
+          style: TextStyle(
+            fontSize: 24.0,
+            fontWeight: FontWeight.bold,
+            fontFamily: 'Broadway',
+          ),
+        ),
       ),
 
       body: Padding(
@@ -153,7 +160,7 @@ class _ResistorScreenState extends State<ResistorScreen> {
                   numberOfBands = newValue ?? 4;
                 });
               },
-              decoration: InputDecoration(labelText: 'Number of Bands'),
+              decoration: const InputDecoration(labelText: 'Number of Bands'),
             ),
             DropdownButtonFormField<String>(
               value: band1Color,
@@ -168,7 +175,7 @@ class _ResistorScreenState extends State<ResistorScreen> {
                   band1Color = newValue;
                 });
               },
-              decoration: InputDecoration(labelText: 'Band 1 Color'),
+              decoration: const InputDecoration(labelText: 'Band 1 Color'),
             ),
             DropdownButtonFormField<String>(
               value: band2Color,
@@ -183,7 +190,7 @@ class _ResistorScreenState extends State<ResistorScreen> {
                   band2Color = newValue;
                 });
               },
-              decoration: InputDecoration(labelText: 'Band 2 Color'),
+              decoration: const InputDecoration(labelText: 'Band 2 Color'),
             ),
             if (numberOfBands == 5)
               DropdownButtonFormField<String>(
@@ -199,7 +206,7 @@ class _ResistorScreenState extends State<ResistorScreen> {
                     band3Color = newValue;
                   });
                 },
-                decoration: InputDecoration(labelText: 'Band 3 Color'),
+                decoration: const InputDecoration(labelText: 'Band 3 Color'),
               ),
             DropdownButtonFormField<String>(
               value: multiplierColor,
@@ -214,7 +221,7 @@ class _ResistorScreenState extends State<ResistorScreen> {
                   multiplierColor = newValue;
                 });
               },
-              decoration: InputDecoration(labelText: 'Multiplier Color'),
+              decoration: const InputDecoration(labelText: 'Multiplier Color'),
             ),
             if (numberOfBands == 4 || numberOfBands == 5)
               DropdownButtonFormField<String>(
@@ -230,22 +237,22 @@ class _ResistorScreenState extends State<ResistorScreen> {
                     toleranceColor = newValue;
                   });
                 },
-                decoration: InputDecoration(labelText: 'Tolerance Color'),
+                decoration: const InputDecoration(labelText: 'Tolerance Color'),
               ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             ElevatedButton(
               onPressed: calculateResistance,
-              child: Text('Calculate Resistance'),
+              child: const Text('Calculate Resistance'),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Text(
               'Resistance: ${resistanceValue.toStringAsFixed(2)} Ω',
-              style: TextStyle(fontSize: 24),
+              style: const TextStyle(fontSize: 24),
             ),
             if (toleranceValue.isNotEmpty)
               Text(
                 'Tolerance: $toleranceValue',
-                style: TextStyle(fontSize: 18),
+                style: const TextStyle(fontSize: 18),
               ),
           ],
         ),
